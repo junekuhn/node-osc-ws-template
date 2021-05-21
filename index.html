@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Websockets and OSC</title>
+   <link>
+</head>
+
+<body>
+   hello osc and node and express and websockets
+   <script type="text/javascript">
+      const socket = new WebSocket('ws://localhost:8000');
+
+      socket.addEventListener("open", function (e) {
+         socket.send("hello server");
+      });
+
+      socket.addEventListener("message", function (e) {
+         console.log("message is ", e.data);
+      })
+   </script>
+</body>
+
+</html>
